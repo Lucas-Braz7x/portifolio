@@ -5,6 +5,10 @@
  */
 
 @theme {
+  /* Camadas — spec 09 / 12 */
+  --z-atmosphere: 5;
+  --z-content: 10;
+
   /* Layout */
   --width-content: 48rem;
   --spacing-page-x: 1.5rem;

@@ -1,0 +1,83 @@
+/**
+ * Efeitos atmosféricos 2D — spec 09.
+ * Overlays não capturam ponteiro; z-index abaixo do conteúdo interativo.
+ */
+
+@layer components {
+  .atmosphere-grain {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-atmosphere);
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+  }
+
+  .atmosphere-grain--animated {
+    animation: atmosphere-grain-shift 8s steps(6) infinite;
+  }
+
+  @keyframes atmosphere-grain-shift {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-3%, 2%);
+    }
+  }
+
+  .atmosphere-vignette {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-atmosphere);
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 85% 75% at 50% 45%,
+      transparent 55%,
+      rgb(0 0 0 / 0.45) 100%
+    );
+  }
+
+  .atmosphere-vignette--flicker {
+    animation: atmosphere-flicker 14s ease-in-out infinite;
+  }
+
+  @keyframes atmosphere-flicker {
+    0%,
+    96%,
+    100% {
+      opacity: 1;
+    }
+    97% {
+      opacity: 0.88;
+    }
+    97.6% {
+      opacity: 0.96;
+    }
+  }
+
+  .atmosphere-log {
+    position: fixed;
+    right: var(--spacing-page-x);
+    bottom: var(--spacing-page-x);
+    z-index: var(--z-atmosphere);
+    pointer-events: none;
+    max-width: 12rem;
+    opacity: 0.35;
+  }
+
+  @media (max-width: 640px) {
+    .atmosphere-log {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-grain--animated,
+  .atmosphere-vignette--flicker {
+    animation: none !important;
+  }
+}

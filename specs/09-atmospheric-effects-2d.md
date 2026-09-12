@@ -42,10 +42,10 @@ STATUS: BUILDING
 
 ## Entregáveis
 
-- [ ] Componentes ou classes reutilizáveis (`GrainOverlay`, `Vignette`, etc.)
-- [ ] Toggle respeitando `prefers-reduced-motion` (desliga flicker/grain animado)
+- [x] Componentes ou classes reutilizáveis (`GrainOverlay`, `Vignette`, etc.) → [`src/components/atmosphere/`](../src/components/atmosphere/), [`src/styles/atmosphere.css`](../src/styles/atmosphere.css)
+- [x] Toggle respeitando `prefers-reduced-motion` (desliga flicker/grain animado) → [`AtmosphericEffects`](../src/components/atmosphere/AtmosphericEffects.tsx) + `useReducedMotion` + media query em CSS
 
 ## Critérios de aceite
 
-- Efeitos não degradam legibilidade do texto principal
-- Performance: sem repaint full-screen contínuo pesado em mobile (grain estático ou baixa FPS aceitável)
+- [x] Efeitos não degradam legibilidade do texto principal → overlays `pointer-events: none`, baixa opacidade; conteúdo em `--z-content`
+- [x] Performance: sem repaint full-screen contínuo pesado em mobile (grain estático ou baixa FPS aceitável) → grain SVG estático com `steps(6)` lento; LOG oculto em mobile; animações off com reduced motion

@@ -8,5 +8,5 @@ type PageContainerProps = {
 export const PageContainer = ({ children, as = 'main' }: PageContainerProps) => {
   const Tag = as
 
-  return <Tag className="layout-page">{children}</Tag>
+  return <Tag className="relative z-[var(--z-content)] layout-page">{children}</Tag>
 }
