@@ -35,10 +35,10 @@ Mencionada no doc original como candidata 3D; incluir só se passar na regra de 
 
 ## Entregáveis
 
-- [ ] Assets 3D otimizados (draco/meshopt se necessário)
-- [ ] Estados por rota (config, não hardcode espalhado)
+- [x] Assets 3D otimizados (draco/meshopt se necessário) → geometria procedural leve em [`DoorObject.tsx`](../src/components/three/DoorObject.tsx) / [`PianoObject.tsx`](../src/components/three/PianoObject.tsx); GLB futuro no manifest
+- [x] Estados por rota (config, não hardcode espalhado) → [`content/scene/scene-routes.json`](../content/scene/scene-routes.json)
 
 ## Critérios de aceite
 
-- Porta/piano não quebram LCP crítico da Home (lazy load WebGL)
-- Fase mínima: **V3** — `17-release-phases.md`
+- [x] Porta/piano não quebram LCP crítico da Home (lazy load WebGL) → chunk `three` via [`SceneCanvas.tsx`](../src/components/three/SceneCanvas.tsx) (`React.lazy`)
+- [x] Fase mínima: **V3** — `17-release-phases.md` — comportamento V3 entregue; polish de arte GLB permanece opcional
