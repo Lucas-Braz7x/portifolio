@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1a1a1a"/>
+  <rect width="1920" height="540" fill="#0d0d0d"/>
+  <rect x="1180" y="120" width="420" height="820" fill="#666"/>
+  <rect x="1230" y="180" width="280" height="720" fill="#b3b3b3"/>
+  <ellipse cx="1520" cy="520" rx="160" ry="280" fill="#8a8a8a"/>
+</svg>

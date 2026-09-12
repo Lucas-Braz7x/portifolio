@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "planB": {
+    "summary": "Apenas imagem full-bleed (room-background) sem parallax nem meshes.",
+    "disableParallax": "Mobile, prefers-reduced-motion, ou falha WebGL → CSS background estático.",
+    "disableMeshes": "VITE_SCENE_3D=false mantém camadas 1–2."
+  },
+  "textures": [
+    {
+      "id": "room-background",
+      "path": "/scene/room-background.svg",
+      "format": "svg",
+      "role": "environment",
+      "status": "placeholder",
+      "notes": "Substituir por WEBP/AVIF exportado da concept art (ver docs/scene/concept-art-export.md)."
+    },
+    {
+      "id": "room-depth",
+      "path": "/scene/room-depth.svg",
+      "format": "svg",
+      "role": "depth-map",
+      "pairs": "room-background",
+      "status": "placeholder",
+      "notes": "Mesmas dimensões em pixels que room-background; preto=longe, branco=perto."
+    }
+  ],
+  "meshes": [
+    {
+      "id": "door",
+      "path": null,
+      "format": "glb",
+      "status": "procedural",
+      "spec": "15-3d-door-piano.md",
+      "justification": "Abertura, luz e sombra dinâmicas na narrativa; 2D não sustenta interação."
+    },
+    {
+      "id": "piano",
+      "path": null,
+      "format": "glb",
+      "status": "planned",
+      "spec": "15-3d-door-piano.md",
+      "justification": "Teclas e reação à luz; elemento recorrente pessoal, não decoração."
+    },
+    {
+      "id": "chair",
+      "path": null,
+      "format": "glb",
+      "status": "optional",
+      "spec": "15-3d-door-piano.md",
+      "justification": "Só se passar na regra de ouro (spec 10); caso contrário permanece na textura."
+    }
+  ]
+}
