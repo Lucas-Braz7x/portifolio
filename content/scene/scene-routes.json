@@ -1,0 +1,145 @@
+{
+  "strategy": {
+    "primary": "pathname",
+    "homeScrollBlend": true,
+    "summary": "SPA: pose da câmera e objetos por rota. Na Home, scroll do documento só modula levemente a câmera (sem hijack). Intensidade narrativa (spec 11) amplia abertura da porta."
+  },
+  "routes": [
+    {
+      "path": "/lab",
+      "camera": {
+        "position": [-0.35, 0.05, 2.85],
+        "lookAt": [-0.5, -0.1, -3.2],
+        "fov": 44
+      },
+      "door": {
+        "position": [2.35, -0.55, -4.0],
+        "rotationY": -0.32,
+        "openRad": 0.06
+      },
+      "piano": {
+        "position": [-1.55, -0.72, -3.4],
+        "rotationY": 0.22,
+        "scale": 1,
+        "opacity": 1
+      }
+    },
+    {
+      "path": "/about",
+      "camera": {
+        "position": [-0.2, 0.08, 3.15],
+        "lookAt": [-0.35, -0.05, -3],
+        "fov": 45
+      },
+      "door": {
+        "position": [2.2, -0.55, -4.1],
+        "rotationY": -0.38,
+        "openRad": 0.045
+      },
+      "piano": {
+        "position": [-1.7, -0.75, -3.7],
+        "rotationY": 0.28,
+        "scale": 0.95,
+        "opacity": 0.78
+      }
+    },
+    {
+      "path": "/contact",
+      "camera": {
+        "position": [-0.15, 0.1, 3.25],
+        "lookAt": [-0.3, -0.05, -2.8],
+        "fov": 46
+      },
+      "door": {
+        "position": [2.15, -0.55, -4.15],
+        "rotationY": -0.36,
+        "openRad": 0.04
+      },
+      "piano": {
+        "position": [-1.75, -0.76, -3.85],
+        "rotationY": 0.3,
+        "scale": 0.92,
+        "opacity": 0.7
+      }
+    },
+    {
+      "path": "/projects/*",
+      "camera": {
+        "position": [0.25, 0.12, 3.55],
+        "lookAt": [0.1, 0, -2.8],
+        "fov": 47
+      },
+      "door": {
+        "position": [2.1, -0.55, -4.2],
+        "rotationY": -0.4,
+        "openRad": 0.035
+      },
+      "piano": {
+        "position": [-1.8, -0.77, -4],
+        "rotationY": 0.33,
+        "scale": 0.88,
+        "opacity": 0.52
+      }
+    },
+    {
+      "path": "/projects",
+      "camera": {
+        "position": [0.18, 0.14, 3.65],
+        "lookAt": [0.05, 0, -2.7],
+        "fov": 47
+      },
+      "door": {
+        "position": [2.1, -0.55, -4.2],
+        "rotationY": -0.4,
+        "openRad": 0.03
+      },
+      "piano": {
+        "position": [-1.85, -0.78, -4.05],
+        "rotationY": 0.34,
+        "scale": 0.86,
+        "opacity": 0.42
+      }
+    },
+    {
+      "path": "/",
+      "camera": {
+        "position": [0, 0.15, 3.8],
+        "lookAt": [0.15, 0, -2.5],
+        "fov": 48
+      },
+      "scroll": {
+        "position": [0, 0.05, -0.2],
+        "lookAt": [0.04, 0, -0.15]
+      },
+      "door": {
+        "position": [2.1, -0.55, -4.2],
+        "rotationY": -0.4,
+        "openRad": 0.025
+      },
+      "piano": {
+        "position": [-1.85, -0.78, -4.1],
+        "rotationY": 0.32,
+        "scale": 0.85,
+        "opacity": 0.14
+      }
+    }
+  ],
+  "default": {
+    "camera": {
+      "position": [0, 0.15, 3.8],
+      "lookAt": [0.15, 0, -2.5],
+      "fov": 48
+    },
+    "door": {
+      "position": [2.1, -0.55, -4.2],
+      "rotationY": -0.4,
+      "openRad": 0.025
+    },
+    "piano": {
+      "position": [-1.85, -0.78, -4.1],
+      "rotationY": 0.32,
+      "scale": 0.85,
+      "opacity": 0.14
+    }
+  }
+}
