@@ -9,7 +9,7 @@ export const ProjectDetailPage = () => {
   if (!project) {
     return (
       <div>
-        <h2 className="type-page-title">Projeto não encontrado</h2>
+        <h1 className="type-page-title">Projeto não encontrado</h1>
         <p className="type-body-sm mt-4 text-[var(--color-muted)]">
           Slug <code className="text-[var(--color-fg)]">{slug}</code> não existe em{' '}
           <code className="text-[var(--color-fg)]">content/projects/</code>.
@@ -29,7 +29,7 @@ export const ProjectDetailPage = () => {
   return (
     <article>
       <p className="type-section-kicker text-[var(--color-muted)]">Case study</p>
-      <h2 className="type-section-title mt-2">{project.title}</h2>
+      <h1 className="type-section-title mt-2">{project.title}</h1>
       <p className="type-body-sm mt-4 text-[var(--color-muted)]">{project.summary}</p>
       {stackLabel ? (
         <p className="type-caption mt-2 text-[var(--color-muted)]">{stackLabel}</p>

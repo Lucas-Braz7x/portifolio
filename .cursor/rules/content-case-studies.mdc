@@ -20,7 +20,7 @@ Não publicar case só com lista de tecnologias.
 
 ## Experience (`content/experience/`)
 
-Bloco Currently + lista Learning (`specs/05-section-currently.md`); itens numerados, sem parágrafo obrigatório por item.
+Bloco Currently + lista Learning (`specs/05-section-currently.md`); schema em `content/experience/README.md`. Itens numerados, sem parágrafo obrigatório por item.
 
 ## Lab (`content/experiments/`)
 

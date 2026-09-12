@@ -6,7 +6,7 @@ export const ProjectsPage = () => {
 
   return (
     <div>
-      <h2 className="type-page-title">Projetos</h2>
+      <h1 className="type-page-title">Projetos</h1>
       <p className="type-body-sm mt-4 text-[var(--color-muted)]">
         Case studies carregados de{' '}
         <code className="text-[var(--color-fg)]">content/projects/</code> no build.

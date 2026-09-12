@@ -1,6 +1,19 @@
 # Portfólio — Lucas Braz Dutra
 
-React + Vite + TypeScript + Tailwind CSS v4. Especificações em [`specs/README.md`](./specs/README.md).
+React + Vite + TypeScript + Tailwind CSS v4. Especificações em [`specs/README.md`](./specs/README.md). Estilo de código: [`docs/code-style.md`](./docs/code-style.md).
+
+## Stack e rotas (spec 03)
+
+| Rota | Página |
+|------|--------|
+| `/` | Home |
+| `/projects` | Lista (Markdown em `content/projects/`) |
+| `/projects/:slug` | Case study |
+| `/about` | Sobre |
+| `/contact` | Contato |
+| `/lab` | Lab |
+
+Conteúdo editorial em `content/`; loaders em [`src/lib/content/`](./src/lib/content/). Deploy: artefato estático `dist/` (sem backend). Scripts: `yarn dev` / `yarn build` / `yarn preview`.
 
 ## Visão (spec 01)
 

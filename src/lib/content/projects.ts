@@ -50,3 +50,10 @@ export const getFeaturedProjects = (): readonly Project[] =>
 
 export const getProjectBySlug = (slug: string): Project | undefined =>
   allProjects.find((project) => project.slug === slug)
+
+/** Home selected work: featured first, até 5 itens (spec 04). */
+export const getHomeSelectedProjects = (): readonly Project[] => {
+  const featured = allProjects.filter((project) => project.featured)
+  const pool = featured.length > 0 ? featured : allProjects
+  return pool.slice(0, 5)
+}

@@ -50,8 +50,8 @@ GitHub · LinkedIn · Email
 
 ## Entregáveis
 
-- [ ] `app/page.tsx` (ou composição) com seções 01–03
-- [ ] Componentes reutilizáveis: hero, section divider, project teaser, social links
+- [x] `app/page.tsx` (ou composição) com seções 01–03 → [`src/pages/HomePage.tsx`](../src/pages/HomePage.tsx)
+- [x] Componentes reutilizáveis: hero, section divider, project teaser, social links → [`src/components/home/`](../src/components/home/), [`SectionDivider`](../src/components/ui/SectionDivider.tsx)
 
 ## Critérios de aceite
 

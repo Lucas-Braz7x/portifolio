@@ -7,10 +7,17 @@ type PageSectionProps = {
 }
 
 export const PageSection = ({ index, title, children }: PageSectionProps) => {
+  const titleId = `section-${title.toLowerCase().replace(/\s+/g, '-')}`
+
   return (
-    <section className="border-t border-[var(--color-border)] py-12 first:border-t-0 first:pt-0">
+    <section
+      className="border-t border-[var(--color-border)] py-12"
+      aria-labelledby={titleId}
+    >
       <p className="type-section-kicker text-[var(--color-muted)]">{index}</p>
-      <h2 className="type-section-title mt-2">{title}</h2>
+      <h2 id={titleId} className="type-section-title mt-2">
+        {title}
+      </h2>
       <div className="mt-6 text-[var(--color-muted)]">{children}</div>
     </section>
   )
