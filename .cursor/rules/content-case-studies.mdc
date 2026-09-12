@@ -24,7 +24,7 @@ Bloco Currently + lista Learning (`specs/05-section-currently.md`); schema em `c
 
 ## Lab (`content/experiments/`)
 
-Experimentos informais (`specs/07-lab-oficina.md`); não exigir template completo de case study.
+Experimentos informais (`specs/07-lab-oficina.md`); schema em `content/experiments/README.md`. Não exigir template completo de case study.
 
 ## Idioma
 

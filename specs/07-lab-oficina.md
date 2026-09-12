@@ -33,10 +33,10 @@ Opções documentadas: `Lab`, `Experiments`, `Workshop`, **`Oficina`** (favorece
 
 ## Entregáveis
 
-- [ ] Rota (ex. `/lab`) e `content/experiments/`
-- [ ] Componente de listagem distinto visualmente de “Selected work”
+- [x] Rota (ex. `/lab`) e `content/experiments/` → [`/lab`](../src/routes/index.tsx), [`content/experiments/`](../content/experiments/README.md)
+- [x] Componente de listagem distinto visualmente de “Selected work” → [`ExperimentList`](../src/components/lab/ExperimentList.tsx) (grid editorial + borda accent)
 
 ## Critérios de aceite
 
-- Adicionar experimento novo = novo arquivo em `content/experiments/` sem mudar código de layout
-- Lab não aparece misturado aos featured projects da Home (link separado na nav quando existir)
+- [x] Adicionar experimento novo = novo arquivo em `content/experiments/` sem mudar código de layout → [`src/lib/content/experiments.ts`](../src/lib/content/experiments.ts)
+- [x] Lab não aparece misturado aos featured projects da Home (link separado na nav quando existir) → [`PrimaryNav`](../src/components/layout/PrimaryNav.tsx) `[ 04 ] Lab`; Home só `featured` projects
