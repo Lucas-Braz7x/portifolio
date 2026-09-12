@@ -17,6 +17,14 @@ Fonte: [`content/site/principles.json`](../content/site/principles.json)
 - [ ] Projetos enfatizam decisões (se aplicável).
 - [ ] O diff demonstra engenharia sólida (tipos, a11y, estrutura).
 
+## WebGL / Three.js (se aplicável — spec 10)
+
+Ver [`docs/adr/001-threejs-role.md`](../docs/adr/001-threejs-role.md).
+
+- [ ] Sensação atmosférica que o 3D reforça (uma frase no PR).
+- [ ] Por que 2D/CSS/imagem não bastam.
+- [ ] Comportamento com WebGL indisponível (fallback testado).
+
 ## Teste
 
 <!-- yarn build, yarn lint, como validou visualmente -->

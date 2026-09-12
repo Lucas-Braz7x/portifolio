@@ -42,9 +42,9 @@ Fracasso:
 
 ## Entregáveis
 
-- [ ] ADR curto no repo citando opção escolhida (quando decidido em `18-open-decisions.md`)
-- [ ] Critério de review: todo mesh/efeito WebGL referencia user story atmosférica
+- [x] ADR curto no repo citando opção escolhida (quando decidido em `18-open-decisions.md`) → [`docs/adr/001-threejs-role.md`](../docs/adr/001-threejs-role.md) (direção B+C; detalhe final em `18`)
+- [x] Critério de review: todo mesh/efeito WebGL referencia user story atmosférica → seção no [PR template](../.github/pull_request_template.md)
 
 ## Critérios de aceite
 
-- Fallback sem WebGL: site permanece utilizável (`02-principles.md`)
+- [x] Fallback sem WebGL: site permanece utilizável (`02-principles.md`) — V1 sem canvas; atmosfera 2D em spec 09; ADR exige fallback para fases 3D
