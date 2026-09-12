@@ -1,4 +1,4 @@
-export function ContactPage() {
+export const ContactPage = () => {
   return (
     <div>
       <h2 className="type-page-title">Contato</h2>

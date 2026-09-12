@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { siteVision } from '@/lib/site-vision'
 
 /** Sincroniza title e meta description com `content/site/vision.json`. */
-export function useSiteDocumentMeta() {
+export const useSiteDocumentMeta = () => {
   useEffect(() => {
     document.title = siteVision.documentTitle
 

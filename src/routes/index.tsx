@@ -25,9 +25,9 @@ const LabPage = lazy(() =>
   import('@/pages/LabPage').then((m) => ({ default: m.LabPage })),
 )
 
-function withSuspense(element: ReactNode) {
-  return <Suspense fallback={<PageFallback />}>{element}</Suspense>
-}
+const withSuspense = (element: ReactNode) => (
+  <Suspense fallback={<PageFallback />}>{element}</Suspense>
+)
 
 export const router = createBrowserRouter([
   {

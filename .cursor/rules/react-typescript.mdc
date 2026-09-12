@@ -6,6 +6,7 @@ alwaysApply: false
 
 # React e TypeScript
 
+- **Arrow functions** para componentes, hooks e helpers em `src/` (ver [`docs/code-style.md`](../../docs/code-style.md)).
 - Componentes funcionais; sem classes.
 - Colocar lógica reutilizável em hooks em `src/hooks/` (ex.: `useReducedMotion`, `useMediaQuery`).
 - Props tipadas; evitar `any`. Preferir tipos de domínio em `src/types/`.
@@ -26,9 +27,9 @@ alwaysApply: false
 
 ```tsx
 // ✅ página fina
-export function ProjectsPage() {
-  const projects = useProjects(); // lê content/ no build
-  return <ProjectList items={projects} />;
+export const ProjectsPage = () => {
+  const projects = useProjects() // lê content/ no build
+  return <ProjectList projects={projects} />
 }
 ```
 

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
 
 /** Preferência do usuário para menos movimento (efeitos JS devem respeitar). */
-export function useReducedMotion(): boolean {
+export const useReducedMotion = (): boolean => {
   const [reducedMotion, setReducedMotion] = useState(false)
 
   useEffect(() => {

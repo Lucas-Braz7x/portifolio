@@ -6,7 +6,7 @@ type PageSectionProps = {
   children: ReactNode
 }
 
-export function PageSection({ index, title, children }: PageSectionProps) {
+export const PageSection = ({ index, title, children }: PageSectionProps) => {
   return (
     <section className="border-t border-[var(--color-border)] py-12 first:border-t-0 first:pt-0">
       <p className="type-section-kicker text-[var(--color-muted)]">{index}</p>

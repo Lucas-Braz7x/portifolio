@@ -10,7 +10,7 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
       : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]',
   ].join(' ')
 
-export function RootLayout() {
+export const RootLayout = () => {
   useSiteDocumentMeta()
 
   return (

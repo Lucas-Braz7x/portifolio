@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { PageSection } from '@/components/ui/PageSection'
 import { siteVision } from '@/lib/site-vision'
 
-export function HomePage() {
+export const HomePage = () => {
   return (
     <div className="space-y-2">
       <p className="type-body max-w-xl text-[var(--color-fg)]">

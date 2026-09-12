@@ -1,4 +1,4 @@
-export function LabPage() {
+export const LabPage = () => {
   return (
     <div>
       <h2 className="type-page-title">Lab</h2>

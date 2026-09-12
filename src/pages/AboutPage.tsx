@@ -1,4 +1,4 @@
-export function AboutPage() {
+export const AboutPage = () => {
   return (
     <div>
       <h2 className="type-page-title">Sobre</h2>
