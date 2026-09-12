@@ -1,0 +1,54 @@
+{
+  "principles": [
+    {
+      "id": "personality-over-effects",
+      "summary": "Personalidade > quantidade de efeitos.",
+      "reviewPrompt": "A mudança reforça identidade sem empilhar efeitos?"
+    },
+    {
+      "id": "technical-content-over-buzzwords",
+      "summary": "Conteúdo técnico > buzzwords.",
+      "reviewPrompt": "O copy explica problema, contexto ou decisão — não só stack?"
+    },
+    {
+      "id": "atmosphere-over-decoration",
+      "summary": "Atmosfera > decoração.",
+      "reviewPrompt": "O visual serve clima e leitura, ou é ornamento?"
+    },
+    {
+      "id": "threejs-with-purpose",
+      "summary": "Three.js deve ter propósito.",
+      "reviewPrompt": "O 3D justifica bundle e complexidade nesta fase?"
+    },
+    {
+      "id": "works-without-heavy-js",
+      "summary": "O site continua excelente sem JavaScript pesado.",
+      "reviewPrompt": "Navegação e conteúdo seguem utilizáveis se WebGL/efeitos falharem?"
+    },
+    {
+      "id": "mobile-from-start",
+      "summary": "Mobile considerado desde o início.",
+      "reviewPrompt": "Layout, toque e performance foram validados em viewport pequeno?"
+    },
+    {
+      "id": "subtle-horror",
+      "summary": "Não exagerar na estética de terror.",
+      "reviewPrompt": "A estranheza permanece sutil e subordinada à credibilidade técnica?"
+    },
+    {
+      "id": "justified-animation",
+      "summary": "Cada animação precisa justificar sua existência.",
+      "reviewPrompt": "Esta animação tem motivo claro e respeita prefers-reduced-motion?"
+    },
+    {
+      "id": "projects-show-decisions",
+      "summary": "Projetos mostram decisões, não apenas tecnologias.",
+      "reviewPrompt": "Case studies seguem o template de engenharia (spec 06)?"
+    },
+    {
+      "id": "portfolio-as-engineering",
+      "summary": "O portfólio é também demonstração de engenharia.",
+      "reviewPrompt": "O diff do repo reflete boas práticas (tipos, estrutura, a11y, performance)?"
+    }
+  ]
+}

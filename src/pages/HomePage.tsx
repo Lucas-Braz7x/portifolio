@@ -6,23 +6,23 @@ import { siteVision } from '@/lib/site-vision'
 export function HomePage() {
   return (
     <div className="space-y-2">
-      <p className="max-w-xl text-lg leading-relaxed text-[var(--color-fg)]">
+      <p className="type-body max-w-xl text-[var(--color-fg)]">
         {siteVision.positioning}
       </p>
 
       <PageSection index="01 / Currently" title="Agora">
-        <p className="font-mono text-sm text-[var(--color-fg)]">
+        <p className="type-body-sm text-[var(--color-fg)]">
           Software Engineer @ Certta
         </p>
-        <p className="mt-2 font-mono text-sm">AWS · Backend · Fullstack · AI</p>
-        <p className="mt-4 text-sm">
+        <p className="type-body-sm mt-2">AWS · Backend · Fullstack · AI</p>
+        <p className="type-body-sm mt-4">
           Conteúdo editável em{' '}
           <code className="text-[var(--color-fg)]">content/experience/</code>.
         </p>
       </PageSection>
 
       <PageSection index="02 / Selected work" title="Trabalho selecionado">
-        <p className="text-sm">
+        <p className="type-body-sm">
           Case studies em{' '}
           <Link
             to="/projects"
@@ -35,7 +35,7 @@ export function HomePage() {
       </PageSection>
 
       <PageSection index="03 / Elsewhere" title="Links">
-        <ul className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm">
+        <ul className="type-body-sm flex flex-wrap gap-x-6 gap-y-2">
           <li>
             <a
               href="https://github.com/"

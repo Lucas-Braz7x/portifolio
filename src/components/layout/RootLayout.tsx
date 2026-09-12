@@ -4,7 +4,7 @@ import { useSiteDocumentMeta } from '@/hooks/useSiteDocumentMeta'
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
-    'font-mono text-sm tracking-wide uppercase transition-colors',
+    'type-nav transition-colors',
     isActive
       ? 'text-[var(--color-fg)]'
       : 'text-[var(--color-muted)] hover:text-[var(--color-fg)]',
@@ -17,13 +17,11 @@ export function RootLayout() {
     <div className="min-h-dvh bg-[var(--color-bg)] text-[var(--color-fg)]">
       <header className="mx-auto flex max-w-3xl flex-col gap-8 px-6 py-12 md:py-16">
         <div>
-          <p className="font-mono text-xs tracking-[0.2em] text-[var(--color-muted)] uppercase">
-            Arquivo
+          <p className="type-section-kicker text-[var(--color-muted)]">Arquivo</p>
+          <h1 className="type-display-name mt-3">Lucas Braz Dutra</h1>
+          <p className="type-display-role mt-3 text-[var(--color-fg)]">
+            Software Engineer
           </p>
-          <h1 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
-            Lucas Braz Dutra
-          </h1>
-          <p className="mt-2 text-[var(--color-muted)]">Software Engineer</p>
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Principal">
           <NavLink to="/projects" className={navLinkClass}>

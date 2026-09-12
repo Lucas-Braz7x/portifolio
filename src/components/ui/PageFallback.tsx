@@ -1,6 +1,6 @@
 export function PageFallback() {
   return (
-    <p className="font-mono text-sm text-[var(--color-muted)]" role="status">
+    <p className="type-body-sm text-[var(--color-muted)]" role="status">
       Carregando…
     </p>
   )

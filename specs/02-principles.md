@@ -24,9 +24,9 @@ Regras transversais para conteúdo, performance, acessibilidade e efeitos.
 
 ## Entregáveis
 
-- [ ] Checklist de PR/review interno baseado nos 10 itens (pode ser seção no README do repo)
+- [x] Checklist de PR/review interno baseado nos 10 itens → [`.github/pull_request_template.md`](../.github/pull_request_template.md) + seção no [README](../README.md); dados em [`content/site/principles.json`](../content/site/principles.json)
 
 ## Critérios de aceite
 
-- Home e projetos legíveis com JS desabilitado ou falha de WebGL (fallback definido em `12-scene-3d-layers.md`).
-- Nenhuma animação contínua sem `prefers-reduced-motion` respeitado (detalhar em `09-atmospheric-effects-2d.md`).
+- Home e projetos legíveis com JS desabilitado ou falha de WebGL (fallback definido em `12-scene-3d-layers.md`). **V1:** `<noscript>` em `index.html`; degradação WebGL → spec 12.
+- Nenhuma animação contínua sem `prefers-reduced-motion` respeitado (detalhar em `09-atmospheric-effects-2d.md`). **Base:** `src/styles/index.css` + hook `src/hooks/useReducedMotion.ts` para efeitos JS futuros.

@@ -5,13 +5,11 @@ export function ProjectDetailPage() {
 
   return (
     <article>
-      <p className="font-mono text-xs text-[var(--color-muted)] uppercase">
-        Case study
-      </p>
-      <h2 className="mt-2 text-2xl font-medium tracking-tight capitalize">
+      <p className="type-section-kicker text-[var(--color-muted)]">Case study</p>
+      <h2 className="type-section-title mt-2 capitalize">
         {slug?.replace(/-/g, ' ') ?? 'Projeto'}
       </h2>
-      <p className="mt-6 text-[var(--color-muted)]">
+      <p className="type-body-sm mt-6 text-[var(--color-muted)]">
         Template: Problema → Contexto → Decisões → Arquitetura → Resultado → O que eu
         faria diferente (
         <code className="text-[var(--color-fg)]">

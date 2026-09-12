@@ -36,8 +36,8 @@ Características:
 
 ## Entregáveis
 
-- [ ] Tokens Tailwind (cores, fontes, spacing scale)
-- [ ] Escolha de 1–2 famílias tipográficas (display + mono técnica)
+- [ ] Tokens Tailwind (cores, fontes, spacing scale) — **tipografia:** `src/styles/typography.css` + `@theme` em `index.css`
+- [x] Escolha de 1–2 famílias tipográficas (display + mono técnica) — **Cormorant Garamond** (display) + **IBM Plex Mono** (dados/nav/corpo); referência `docs/images/home.png`
 - [ ] Grid/layout base em `components/layout/`
 
 ## Critérios de aceite

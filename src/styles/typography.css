@@ -1,0 +1,46 @@
+/**
+ * Hierarquia tipográfica — referência: docs/images/home.png (spec 08).
+ * Display: serif, caps, tracking amplo. Corpo/nav/meta: monoespaçada.
+ */
+
+@layer components {
+  .type-display-name {
+    @apply font-display text-4xl leading-none font-normal tracking-[0.06em] uppercase md:text-5xl;
+  }
+
+  .type-display-role {
+    @apply font-display text-lg leading-snug font-normal tracking-[0.22em] uppercase;
+  }
+
+  .type-section-kicker {
+    @apply font-mono text-xs leading-none tracking-[0.12em] uppercase;
+  }
+
+  .type-section-title {
+    @apply font-display text-3xl leading-tight font-normal tracking-[0.05em] uppercase;
+  }
+
+  .type-page-title {
+    @apply font-display text-3xl leading-tight font-normal tracking-[0.05em] uppercase;
+  }
+
+  .type-project-title {
+    @apply font-display text-lg leading-snug font-normal;
+  }
+
+  .type-body {
+    @apply font-mono text-base leading-snug;
+  }
+
+  .type-body-sm {
+    @apply font-mono text-sm leading-snug;
+  }
+
+  .type-caption {
+    @apply font-mono text-xs leading-snug;
+  }
+
+  .type-nav {
+    @apply font-mono text-[0.8125rem] leading-none tracking-[0.08em] uppercase;
+  }
+}
