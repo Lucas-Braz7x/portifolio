@@ -1,0 +1,31 @@
+/**
+ * Design tokens — spec 08 (identidade visual 2D).
+ * Cores: alto contraste (fg ~ #ece8e1 em bg ~ #0a0a0b → WCAG AA body).
+ * Accent pontual; evitar vermelho dominante.
+ */
+
+@theme {
+  /* Layout */
+  --width-content: 48rem;
+  --spacing-page-x: 1.5rem;
+  --spacing-header-y: 2rem;
+  --spacing-section-y: 3rem;
+  --spacing-stack-sm: 1rem;
+  --spacing-stack-md: 1.5rem;
+  --spacing-stack-lg: 2.5rem;
+}
+
+@layer components {
+  .layout-page {
+    @apply mx-auto w-full max-w-[var(--width-content)] px-[var(--spacing-page-x)] pb-24;
+  }
+
+  .layout-header {
+    @apply mx-auto w-full max-w-[var(--width-content)] px-[var(--spacing-page-x)] py-8 md:py-10;
+  }
+
+  /** Lista editorial (Lab) — distinta de teasers de projeto */
+  .editorial-grid {
+    @apply grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2;
+  }
+}

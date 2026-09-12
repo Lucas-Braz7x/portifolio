@@ -36,11 +36,11 @@ Características:
 
 ## Entregáveis
 
-- [ ] Tokens Tailwind (cores, fontes, spacing scale) — **tipografia:** `src/styles/typography.css` + `@theme` em `index.css`
+- [x] Tokens Tailwind (cores, fontes, spacing scale) — [`src/styles/tokens.css`](../src/styles/tokens.css) + `@theme` em [`index.css`](../src/styles/index.css); tipografia em [`typography.css`](../src/styles/typography.css)
 - [x] Escolha de 1–2 famílias tipográficas (display + mono técnica) — **Cormorant Garamond** (display) + **IBM Plex Mono** (dados/nav/corpo); referência `docs/images/home.png`
-- [ ] Grid/layout base em `components/layout/`
+- [x] Grid/layout base em `components/layout/` → [`SiteHeader`](../src/components/layout/SiteHeader.tsx), [`PageContainer`](../src/components/layout/PageContainer.tsx), classes `.layout-page` / `.editorial-grid`
 
 ## Critérios de aceite
 
-- Contraste WCAG AA para texto body principal
-- Tipografia e cores documentadas nesta spec ou em `tailwind.config` com comentário referenciando spec 08
+- [x] Contraste WCAG AA para texto body principal — `--color-fg` em `--color-bg` (~15:1); muted apenas em meta secundária
+- [x] Tipografia e cores documentadas nesta spec ou em `tailwind.config` com comentário referenciando spec 08 — comentário em `index.css`; tokens em `tokens.css`

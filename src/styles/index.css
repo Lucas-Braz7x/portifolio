@@ -1,6 +1,8 @@
 @import 'tailwindcss';
+@import './tokens.css';
 @import './typography.css';
 
+/* Paleta e fontes — specs/08-visual-identity.md */
 @theme {
   --color-bg: #0a0a0b;
   --color-fg: #ece8e1;
