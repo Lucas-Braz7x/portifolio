@@ -2,6 +2,8 @@
 @import './tokens.css';
 @import './typography.css';
 @import './atmosphere.css';
+@import './scene-layers.css';
+@import './narrative.css';
 
 /* Paleta e fontes — specs/08-visual-identity.md */
 @theme {

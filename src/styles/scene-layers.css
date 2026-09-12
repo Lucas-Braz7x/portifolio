@@ -1,0 +1,28 @@
+/**
+ * Scene layer stack — spec 12.
+ * All scene nodes use pointer-events: none unless a future interactive mesh opts in.
+ */
+
+@layer components {
+  .scene-root {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-scene-root);
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .scene-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .scene-layer--background {
+    z-index: var(--z-scene-bg);
+  }
+
+  .scene-layer--canvas {
+    z-index: var(--z-scene-3d);
+  }
+}

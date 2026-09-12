@@ -5,7 +5,10 @@
  */
 
 @theme {
-  /* Camadas — spec 09 / 12 */
+  /* Camadas — spec 09 / 12 (bottom → top) */
+  --z-scene-root: 0;
+  --z-scene-bg: 1;
+  --z-scene-3d: 2;
   --z-atmosphere: 5;
   --z-content: 10;
 
