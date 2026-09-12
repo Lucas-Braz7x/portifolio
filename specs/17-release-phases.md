@@ -47,10 +47,10 @@ Ordem incremental de entrega; **não é obrigatório** chegar à V4.
 
 ## Entregáveis
 
-- [ ] Milestones ou labels no issue tracker alinhados a V1–V4
-- [ ] Definition of Done por fase (checklist copiável)
+- [x] Milestones ou labels no issue tracker alinhados a V1–V4 → [`.github/release-phase-labels.md`](../.github/release-phase-labels.md), [`scripts/github-phase-labels.sh`](../scripts/github-phase-labels.sh)
+- [x] Definition of Done por fase (checklist copiável) → [`docs/release-phases.md`](../docs/release-phases.md)
 
 ## Critérios de aceite
 
-- V1 deployável em produção como portfólio completo “nível 1” (`01-vision.md`)
-- Cada fase adiciona valor sem tornar V anterior inutilizável
+- [x] V1 deployável em produção como portfólio completo “nível 1” (`01-vision.md`) — validação com flags 3D/parallax/narrativa off em [`docs/release-phases.md`](../docs/release-phases.md#v1--identidade)
+- [x] Cada fase adiciona valor sem tornar V anterior inutilizável — tabela de degradação em [`docs/release-phases.md`](../docs/release-phases.md#degradação-fase-n-off--fase-n1-ok)

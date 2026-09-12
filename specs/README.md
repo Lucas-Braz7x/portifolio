@@ -38,7 +38,7 @@ Especificações derivadas de [`docs/portfolio-lucas-braz-dutra.md`](../docs/por
                               ├──► 15 door/piano ──► 16 camera scroll
                               └──► 11 narrative (pode sobrepor 09 e 15–16)
 
-17 release-phases ordena o que implementar primeiro.
+17 release-phases ordena o que implementar primeiro — DoD: [`docs/release-phases.md`](../docs/release-phases.md).
 18 open-decisions não bloqueia V1, mas bloqueia polish final.
 ```
 
