@@ -34,5 +34,6 @@ Estilos: [`src/styles/scene-layers.css`](../../styles/scene-layers.css), tokens 
 | Arquivo | Função |
 |---------|--------|
 | `SceneLayers.tsx` | Composição das camadas 2–3 no layout |
-| `SceneBackground.tsx` | Placeholder da camada 2.5D |
+| `SceneBackground.tsx` | Camada 2.5D (spec 14) |
+| `DepthParallaxBackground.tsx` | Shader WebGL2 + fallback estático (plano B, spec 13) |
 | `SceneCanvas.tsx` | Boundary WebGL + flag `VITE_SCENE_3D` |

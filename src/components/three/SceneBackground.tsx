@@ -1,7 +1,8 @@
-/**
- * Layer 2 — static / 2.5D environment (spec 12).
- * Depth parallax ships in spec 14; this shell keeps stacking order stable.
- */
+import { DepthParallaxBackground } from '@/components/three/DepthParallaxBackground'
+
+/** Layer 2 — imagem + depth parallax 2.5D (specs 13–14). */
 export const SceneBackground = () => (
-  <div className="scene-layer scene-layer--background" aria-hidden="true" />
+  <div className="scene-layer scene-layer--background">
+    <DepthParallaxBackground />
+  </div>
 )

@@ -10,3 +10,7 @@ export const isNarrativeLayerEnabled = (): boolean =>
 /** WebGL scene (spec 12). `VITE_SCENE_3D=false` desliga o canvas. */
 export const isScene3dEnabled = (): boolean =>
   envFlag(import.meta.env.VITE_SCENE_3D, true)
+
+/** Depth parallax 2.5D (spec 14). `VITE_SCENE_PARALLAX=false` força imagem estática. */
+export const isSceneParallaxEnabled = (): boolean =>
+  envFlag(import.meta.env.VITE_SCENE_PARALLAX, true)

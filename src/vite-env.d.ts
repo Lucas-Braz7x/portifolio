@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   readonly VITE_NARRATIVE_LAYER?: string
   readonly VITE_SCENE_3D?: string
+  readonly VITE_SCENE_PARALLAX?: string
 }
 
 interface ImportMeta {
