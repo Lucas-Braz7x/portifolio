@@ -59,11 +59,11 @@ content/
 
 ## Entregáveis
 
-- [ ] Repo scaffold Vite + rotas acima (páginas placeholder)
-- [ ] Loader de conteúdo a partir de `content/`
+- [x] Repo scaffold Vite + rotas acima (páginas placeholder) → `src/routes/index.tsx`, lazy por rota
+- [x] Loader de conteúdo a partir de `content/` → `src/lib/content/` (`import.meta.glob` + frontmatter em build-time)
 
 ## Critérios de aceite
 
-- `npm run build` gera site estático deployável
+- `yarn build` gera site estático deployável (`dist/`)
 - Nenhuma dependência de API própria para exibir conteúdo publicado
-- Bundle inicial sem Three.js (chunk separado, lazy)
+- Bundle inicial sem Three.js (chunk separado, lazy) → `manualChunks` em `vite.config.ts`; canvas em `React.lazy` quando existir (`specs/10-threejs-guidelines.md`)
