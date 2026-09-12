@@ -30,10 +30,10 @@ Transição foto ↔ 3D deve ser **imperceptível** na melhor versão.
 
 ## Entregáveis
 
-- [ ] Lista de assets: quais PNG/JPG + quais GLB/GLTF
-- [ ] Guia de export (resolução máx, formato) para background
+- [x] Lista de assets: quais PNG/JPG + quais GLB/GLTF → [`content/scene/assets.json`](../content/scene/assets.json)
+- [x] Guia de export (resolução máx, formato) para background → [`docs/scene/concept-art-export.md`](../docs/scene/concept-art-export.md)
 
 ## Critérios de aceite
 
-- Cada elemento 3D justificado pela regra em `10-threejs-guidelines.md`
-- Plano B documentado: apenas imagem full-bleed sem meshes
+- [x] Cada elemento 3D justificado pela regra em `10-threejs-guidelines.md` — campo `justification` em cada mesh no manifest
+- [x] Plano B documentado: apenas imagem full-bleed sem meshes — `planB` no manifest + fallback em [`DepthParallaxBackground.tsx`](../src/components/three/DepthParallaxBackground.tsx)

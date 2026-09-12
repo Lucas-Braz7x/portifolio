@@ -26,13 +26,13 @@ Regiões deslocam em velocidades diferentes com movimento de câmera → sensaç
 
 ## Entregáveis
 
-- [ ] Shader ou técnica escolhida (R3F custom, displacement simples, etc.)
-- [ ] Asset `depth.png` alinhado ao background
+- [x] Shader ou técnica escolhida (R3F custom, displacement simples, etc.) → WebGL2 fullscreen quad em [`src/lib/scene/depth-parallax-gl.ts`](../src/lib/scene/depth-parallax-gl.ts)
+- [x] Asset `depth.png` alinhado ao background → placeholders alinhados [`public/scene/room-depth.svg`](../public/scene/room-depth.svg) + [`room-background.svg`](../public/scene/room-background.svg) (substituir por PNG conforme guia spec 13)
 
 ## Critérios de aceite
 
-- Parallax desligável em mobile ou `prefers-reduced-motion`
-- Sem tearing visível entre camadas ao scroll moderado
+- [x] Parallax desligável em mobile ou `prefers-reduced-motion` → [`usePrefersStaticScene`](../src/hooks/usePrefersStaticScene.ts); `VITE_SCENE_PARALLAX=false` força estático
+- [x] Sem tearing visível entre camadas ao scroll moderado → deslocamento único por pixel via depth (sem fatiar camadas); scroll suavizado com lerp
 
 ## Fase
 
