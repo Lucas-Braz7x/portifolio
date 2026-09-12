@@ -1,10 +1,17 @@
-import { isScene3dEnabled } from '@/lib/feature-flags'
+import { lazy, Suspense } from 'react'
 
 import { useWebGLAvailable } from '@/hooks/useWebGLAvailable'
+import { isScene3dEnabled } from '@/lib/feature-flags'
+
+const SceneCanvasContent = lazy(() =>
+  import('@/components/three/SceneCanvasContent').then((m) => ({
+    default: m.SceneCanvasContent,
+  })),
+)
 
 /**
  * Layer 3 — WebGL boundary (spec 12).
- * R3F content arrives in specs 14–16; when disabled or without WebGL, layer 1–2 suffice.
+ * Bundle `three` carrega sob demanda; desligar com `VITE_SCENE_3D=false`.
  */
 export const SceneCanvas = () => {
   const webgl = useWebGLAvailable()
@@ -14,10 +21,10 @@ export const SceneCanvas = () => {
   }
 
   return (
-    <div
-      className="scene-layer scene-layer--canvas"
-      data-scene-canvas="pending"
-      aria-hidden="true"
-    />
+    <div className="scene-layer scene-layer--canvas">
+      <Suspense fallback={null}>
+        <SceneCanvasContent />
+      </Suspense>
+    </div>
   )
 }

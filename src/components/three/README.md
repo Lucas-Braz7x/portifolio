@@ -25,6 +25,7 @@ Regras:
 - **Nunca** posicionar o canvas acima de `--z-content` sem revisão de a11y.
 - Interação 3D pontual (ex.: tecla do piano): `pointer-events: auto` só no elemento alvo, não no canvas inteiro.
 - `VITE_SCENE_3D=false` ou WebGL indisponível → `SceneCanvas` não monta; site permanece nas camadas 1–2 + atmosfera 2D.
+- Cena atual: [`AtmosphericScene.tsx`](./AtmosphericScene.tsx) (luz, neblina, silhueta distante) — lazy via [`SceneCanvasContent.tsx`](./SceneCanvasContent.tsx).
 
 Estilos: [`src/styles/scene-layers.css`](../../styles/scene-layers.css), tokens em [`src/styles/tokens.css`](../../styles/tokens.css).
 

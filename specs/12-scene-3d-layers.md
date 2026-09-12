@@ -40,10 +40,10 @@ HTML / REACT
 
 ## Entregáveis
 
-- [ ] `components/three/` com boundary claro (canvas não cobre conteúdo interativo)
-- [ ] Documentação de z-index e pointer-events
+- [x] `components/three/` com boundary claro (canvas não cobre conteúdo interativo) → [`src/components/three/`](../src/components/three/), integrado em [`RootLayout`](../src/components/layout/RootLayout.tsx)
+- [x] Documentação de z-index e pointer-events → [`src/components/three/README.md`](../src/components/three/README.md), [`src/styles/scene-layers.css`](../src/styles/scene-layers.css)
 
 ## Critérios de aceite
 
-- Cliques em links e formulários nunca capturados pelo canvas
-- Degradação: camada 3 desligada → camadas 1–2 ou só 1 ainda aceitáveis
+- [x] Cliques em links e formulários nunca capturados pelo canvas — `.scene-root` / `.scene-layer` com `pointer-events: none`; conteúdo em `--z-content`
+- [x] Degradação: camada 3 desligada → camadas 1–2 ou só 1 ainda aceitáveis — `VITE_SCENE_3D` + detecção WebGL em [`SceneCanvas`](../src/components/three/SceneCanvas.tsx)

@@ -41,10 +41,10 @@ Objetivo:
 
 ## Entregáveis
 
-- [ ] Mapa rota → intensidade narrativa (0–2 ou 0–3)
-- [ ] Feature flags ou config para desligar camada narrativa (dev/demo acessível)
+- [x] Mapa rota → intensidade narrativa (0–2 ou 0–3) → [`content/site/narrative-routes.json`](../content/site/narrative-routes.json), [`src/lib/narrative/route-intensity.ts`](../src/lib/narrative/route-intensity.ts)
+- [x] Feature flags ou config para desligar camada narrativa (dev/demo acessível) → `VITE_NARRATIVE_LAYER` em [`.env.example`](../.env.example), [`src/lib/feature-flags.ts`](../src/lib/feature-flags.ts)
 
 ## Critérios de aceite
 
-- Estado 1 sozinho já cumpre portfólio profissional (`01-vision.md`)
-- Nenhuma anomalia bloqueia leitura de projetos ou contato
+- [x] Estado 1 sozinho já cumpre portfólio profissional (`01-vision.md`) — `VITE_NARRATIVE_LAYER=false` força intensidade 0 em todas as rotas
+- [x] Nenhuma anomalia bloqueia leitura de projetos ou contato — camada narrativa só ajusta data-attrs/CSS; conteúdo em `--z-content` com `pointer-events` padrão

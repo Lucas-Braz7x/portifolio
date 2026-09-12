@@ -7,6 +7,6 @@ const envFlag = (value: string | undefined, defaultWhenUnset: boolean): boolean 
 export const isNarrativeLayerEnabled = (): boolean =>
   envFlag(import.meta.env.VITE_NARRATIVE_LAYER, true)
 
-/** WebGL scene shell (spec 12). Off by default until V2 content ships. */
+/** WebGL scene (spec 12). `VITE_SCENE_3D=false` desliga o canvas. */
 export const isScene3dEnabled = (): boolean =>
-  envFlag(import.meta.env.VITE_SCENE_3D, false)
+  envFlag(import.meta.env.VITE_SCENE_3D, true)
