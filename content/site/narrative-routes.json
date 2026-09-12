@@ -1,0 +1,11 @@
+{
+  "defaultIntensity": 0,
+  "routes": [
+    { "path": "/lab", "intensity": 2 },
+    { "path": "/about", "intensity": 1 },
+    { "path": "/contact", "intensity": 1 },
+    { "path": "/projects/*", "intensity": 1 },
+    { "path": "/projects", "intensity": 0 },
+    { "path": "/", "intensity": 0 }
+  ]
+}

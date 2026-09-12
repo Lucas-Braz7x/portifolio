@@ -1,0 +1,18 @@
+/**
+ * Narrative intensity hooks — spec 11.
+ * Anomaly implementations live in specs 09, 15, 16; this file only scales existing 2D atmosphere.
+ */
+
+@layer components {
+  html[data-narrative-intensity='2'] .atmosphere-vignette {
+    background: radial-gradient(
+      ellipse 80% 70% at 50% 42%,
+      transparent 48%,
+      rgb(0 0 0 / 0.55) 100%
+    );
+  }
+
+  html[data-narrative-intensity='2'] .atmosphere-grain {
+    opacity: 0.05;
+  }
+}
