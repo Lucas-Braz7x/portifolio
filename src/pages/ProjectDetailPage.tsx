@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 
+import { CaseStudyLayout } from '@/components/projects/CaseStudyLayout'
 import { useProject } from '@/hooks/useProjects'
 
 export const ProjectDetailPage = () => {
@@ -24,21 +25,5 @@ export const ProjectDetailPage = () => {
     )
   }
 
-  const stackLabel = project.stack.join(' · ')
-
-  return (
-    <article>
-      <p className="type-section-kicker text-[var(--color-muted)]">Case study</p>
-      <h1 className="type-section-title mt-2">{project.title}</h1>
-      <p className="type-body-sm mt-4 text-[var(--color-muted)]">{project.summary}</p>
-      {stackLabel ? (
-        <p className="type-caption mt-2 text-[var(--color-muted)]">{stackLabel}</p>
-      ) : null}
-      <div
-        className="type-body-sm mt-8 space-y-4 whitespace-pre-wrap text-[var(--color-muted)]"
-      >
-        {project.body}
-      </div>
-    </article>
-  )
+  return <CaseStudyLayout project={project} />
 }

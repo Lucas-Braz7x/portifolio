@@ -1,7 +1,11 @@
+import {
+  assertCaseStudyComplete,
+  parseCaseStudySections,
+} from '@/lib/content/case-study-sections'
 import { parseMarkdownDocument } from '@/lib/content/parse-markdown'
 import type { Project, ProjectFrontmatter } from '@/types/content'
 
-const projectModules = import.meta.glob('../../../content/projects/*.md', {
+const projectModules = import.meta.glob('../../../content/projects/*.{md,mdx}', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -9,7 +13,7 @@ const projectModules = import.meta.glob('../../../content/projects/*.md', {
 
 const slugFromPath = (path: string): string => {
   const file = path.split('/').pop() ?? ''
-  return file.replace(/\.md$/, '')
+  return file.replace(/\.(md|mdx)$/, '')
 }
 
 const normalizeStack = (stack: ProjectFrontmatter['stack']): string[] => {
@@ -28,6 +32,9 @@ const toProject = (path: string, raw: string): Project => {
     )
   }
 
+  const sections = parseCaseStudySections(doc.body)
+  assertCaseStudyComplete(slug, sections)
+
   return {
     slug,
     title,
@@ -35,11 +42,12 @@ const toProject = (path: string, raw: string): Project => {
     order,
     featured,
     stack: normalizeStack(stack),
-    body: doc.body,
+    sections,
   }
 }
 
 const allProjects = Object.entries(projectModules)
+  .filter(([path]) => !path.endsWith('README.md'))
   .map(([path, raw]) => toProject(path, raw))
   .sort((a, b) => (a.order ?? 999) - (b.order ?? 999))
 

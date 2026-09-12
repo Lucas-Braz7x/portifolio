@@ -10,13 +10,13 @@ Arquivos em `content/` são a fonte editorial. Código só renderiza; não dupli
 
 ## Projetos (`content/projects/`)
 
-Frontmatter sugerido: `title`, `summary`, `stack` (array ou string), `order`, `featured` (boolean).
+Schema e validação: `content/projects/README.md`. Frontmatter: `title`, `summary`, `stack`, `order`, `featured`.
 
-Corpo do case study — seções **nesta ordem** (`specs/06-projects-case-studies.md`):
+Corpo — seções `##` **nesta ordem** (`specs/06-projects-case-studies.md`):
 
-1. Problema 2. Contexto 3. Decisões 4. Arquitetura (diagrama) 5. Resultado 6. O que eu faria diferente
+1. Problema 2. Contexto 3. Decisões 4. Arquitetura (diagrama mermaid ou imagem) 5. Resultado 6. O que eu faria diferente
 
-Não publicar case só com lista de tecnologias.
+O build falha se faltar seção ou diagrama em Arquitetura.
 
 ## Experience (`content/experience/`)
 

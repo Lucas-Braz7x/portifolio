@@ -6,6 +6,20 @@ export type ProjectFrontmatter = {
   featured?: boolean
 }
 
+export type CaseStudySectionKey =
+  | 'problema'
+  | 'contexto'
+  | 'decisoes'
+  | 'arquitetura'
+  | 'resultado'
+  | 'reflexao'
+
+export type CaseStudySection = {
+  key: CaseStudySectionKey
+  title: string
+  content: string
+}
+
 export type Project = {
   slug: string
   title: string
@@ -13,7 +27,7 @@ export type Project = {
   stack: string[]
   order?: number
   featured?: boolean
-  body: string
+  sections: CaseStudySection[]
 }
 
 export type MarkdownDocument<TFrontmatter extends Record<string, unknown>> = {

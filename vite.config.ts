@@ -24,6 +24,9 @@ export default defineConfig({
           ) {
             return 'three'
           }
+          if (id.includes('node_modules/mermaid')) {
+            return 'mermaid'
+          }
         },
       },
     },

@@ -46,11 +46,11 @@ Seções obrigatórias, nesta ordem:
 
 ## Entregáveis
 
-- [ ] `content/projects/*.mdx` com frontmatter (title, summary, stack, order, featured)
-- [ ] Layout de case study com âncoras ou scroll para cada seção
-- [ ] Página `/projects` listando todos; Home mostra subset `featured`
+- [x] `content/projects/*.mdx` com frontmatter (title, summary, stack, order, featured) → `.md` / `.mdx` + [`content/projects/README.md`](../content/projects/README.md)
+- [x] Layout de case study com âncoras ou scroll para cada seção → [`CaseStudyLayout`](../src/components/projects/CaseStudyLayout.tsx), [`CaseStudyNav`](../src/components/projects/CaseStudyNav.tsx)
+- [x] Página `/projects` listando todos; Home mostra subset `featured` → já em spec 03/04; validação de seções no build
 
 ## Critérios de aceite
 
-- Nenhum case study publicado só com lista de tecnologias
-- Diagrama de arquitetura presente (imagem ou mermaid embed) em cada case publicado
+- [x] Nenhum case study publicado só com lista de tecnologias → template de 6 seções obrigatório (`assertCaseStudyComplete`)
+- [x] Diagrama de arquitetura presente (imagem ou mermaid embed) em cada case publicado → validação em Arquitetura + [`MermaidDiagram`](../src/components/projects/MermaidDiagram.tsx)
