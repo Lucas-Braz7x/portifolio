@@ -41,8 +41,8 @@ Permite unir software, arquitetura, IA, música e curiosidade **sem** uma seçã
 
 ## Entregáveis
 
-- [ ] Uma frase de posicionamento (1–2 linhas) usada na Home ou meta do site
-- [ ] Lista curta de “não objetivos” (ex.: não parecer startup landing, não listar só buzzwords)
+- [x] Uma frase de posicionamento (1–2 linhas) usada na Home ou meta do site → `content/site/vision.json` (`positioning`, `metaDescription`)
+- [x] Lista curta de “não objetivos” (ex.: não parecer startup landing, não listar só buzzwords) → `content/site/vision.json` (`nonObjectives`)
 
 ## Critérios de aceite
 

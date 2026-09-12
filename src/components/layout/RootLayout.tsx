@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
+import { useSiteDocumentMeta } from '@/hooks/useSiteDocumentMeta'
+
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
     'font-mono text-sm tracking-wide uppercase transition-colors',
@@ -9,12 +11,14 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   ].join(' ')
 
 export function RootLayout() {
+  useSiteDocumentMeta()
+
   return (
     <div className="min-h-dvh bg-[var(--color-bg)] text-[var(--color-fg)]">
       <header className="mx-auto flex max-w-3xl flex-col gap-8 px-6 py-12 md:py-16">
         <div>
           <p className="font-mono text-xs tracking-[0.2em] text-[var(--color-muted)] uppercase">
-            Portfolio
+            Arquivo
           </p>
           <h1 className="mt-2 text-3xl font-medium tracking-tight md:text-4xl">
             Lucas Braz Dutra

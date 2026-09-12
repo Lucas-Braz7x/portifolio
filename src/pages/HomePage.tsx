@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 
 import { PageSection } from '@/components/ui/PageSection'
+import { siteVision } from '@/lib/site-vision'
 
 export function HomePage() {
   return (
     <div className="space-y-2">
       <p className="max-w-xl text-lg leading-relaxed text-[var(--color-fg)]">
-        Construo sistemas, exploro ideias e tento entender como as coisas funcionam.
+        {siteVision.positioning}
       </p>
 
       <PageSection index="01 / Currently" title="Agora">

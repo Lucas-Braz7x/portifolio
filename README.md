@@ -2,6 +2,10 @@
 
 React + Vite + TypeScript + Tailwind CSS v4. Especificações em [`specs/README.md`](./specs/README.md).
 
+## Visão (spec 01)
+
+Fonte de verdade editorial: [`content/site/vision.json`](./content/site/vision.json) — metáfora, frase de posicionamento, meta do site e **não objetivos** (use como filtro em features: “reforça arquivo pessoal de engenheiro?”).
+
 ## Ambiente (nvm + Yarn)
 
 ```bash
