@@ -8,6 +8,7 @@ alwaysApply: true
 Portfólio pessoal de Software Engineer: minimalista, técnico, sombrio, cinematográfico. Não é currículo genérico nem landing de startup.
 
 - **Fonte de verdade de escopo:** `specs/README.md` (ler a spec relevante antes de implementar uma feature).
+- **Workflow implementar specs:** skill `.cursor/skills/implement-specs/SKILL.md` (plano → código → marcar entregáveis → `yarn build`/`lint` → comandos `git add`/`commit` por contexto Commitizen).
 - **Doc consolidado:** `docs/portfolio-lucas-braz-dutra.md` (referência; preferir specs para implementação).
 
 ## Princípios (resumo)

@@ -2,6 +2,8 @@
 
 React + Vite + TypeScript + Tailwind CSS v4. Especificações em [`specs/README.md`](./specs/README.md). Estilo de código: [`docs/code-style.md`](./docs/code-style.md).
 
+Para implementar specs com plano + commits sugeridos: skill do projeto [`implement-specs`](./.cursor/skills/implement-specs/SKILL.md) (no chat: *implemente a spec 07* ou *specs 08 e 09*).
+
 ## Stack e rotas (spec 03)
 
 | Rota | Página |
