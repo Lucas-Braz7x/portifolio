@@ -1,0 +1,52 @@
+---
+description: Stack React + Vite, rotas, pastas e deploy estático
+alwaysApply: true
+---
+
+# Stack e estrutura
+
+| Camada | Escolha |
+|--------|---------|
+| App | React 18+ com **Vite** + TypeScript |
+| Rotas | `react-router-dom` (SPA) |
+| Conteúdo | Markdown/MDX em `content/` (build-time; sem backend) |
+| 3D | Three.js; **@react-three/fiber** + **@react-three/drei** quando fizer sentido |
+| Deploy | Artefato estático (`dist/`) — Vercel, Cloudflare Pages ou S3 + CDN |
+| Node | **nvm** (`.nvmrc` → LTS); pacotes com **Yarn 4** (`corepack`) |
+
+**Sem backend** na V1. Dados vêm de arquivos em `content/`, não de API própria.
+
+Qualidade: `yarn lint` (ESLint), `yarn format` / `yarn format:check` (Prettier).
+
+## Pastas alvo
+
+```text
+src/
+├── main.tsx
+├── App.tsx
+├── routes/          # definição de rotas
+├── pages/           # Home, Projects, ProjectDetail, About, Contact, Lab
+├── components/
+│   ├── ui/
+│   ├── layout/
+│   ├── projects/
+│   └── three/       # canvas isolado; ver rule three-scene
+├── lib/             # loaders de conteúdo, utils
+└── styles/          # globals, tokens
+
+content/
+├── projects/
+├── experiments/
+├── experience/      # currently / learning
+└── notes/
+```
+
+## Rotas
+
+`/`, `/projects`, `/projects/:slug`, `/about`, `/contact`, `/lab` (quando Lab existir).
+
+## Convenções
+
+- Imports com alias `@/` → `src/` (configurar no `vite.config`).
+- Code-split por rota (`React.lazy` + `Suspense`) para não inflar o bundle inicial.
+- Three.js em chunk separado; carregar canvas com lazy após conteúdo crítico (LCP).

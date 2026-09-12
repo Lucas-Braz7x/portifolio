@@ -1,0 +1,32 @@
+---
+description: Git — sem push; commit e ações sensíveis só com aprovação
+alwaysApply: true
+---
+
+# Segurança Git e deploy
+
+## Proibido sem pedido explícito
+
+- **`git push`** (qualquer remote, qualquer branch, incluindo `--force`).
+- Publicar em hosting, abrir PR, ou qualquer ação que envie código/artefatos para fora da máquina local.
+
+## Commit
+
+- **Não criar commit** por iniciativa própria.
+- Commit **somente** quando pedir ou **confirmar** explicitamente na conversa.
+- Em caso de dúvida (“quer que eu commite isso?”, escopo do commit, mensagem, arquivos incluídos): **parar e perguntar**.
+
+## Antes de ações irreversíveis ou ambíguas
+
+Pedir aprovação antes de:
+
+- `git reset --hard`, rebase, amend, cherry-pick que reescreva histórico.
+- Alterar `git config`.
+- Commitar `.env`, chaves, tokens ou arquivos de credenciais (avisar se forem pedidos).
+- Force push, delete de branch remota, mudanças em hooks com `--no-verify`.
+
+## Padrão seguro
+
+- Trabalho local: editar arquivos, rodar build/testes, `git status` / `git diff` para inspecionar.
+- Versionar: esperar confirmação → então `git add` + `git commit` com mensagem acordada.
+- Enviar ao remoto: **só** quando pedir push (ou equivalente) de forma clara.

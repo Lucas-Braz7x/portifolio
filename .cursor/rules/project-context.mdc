@@ -1,0 +1,26 @@
+---
+description: Visão do portfólio, specs e princípios de produto
+alwaysApply: true
+---
+
+# Contexto do projeto
+
+Portfólio pessoal de Software Engineer: minimalista, técnico, sombrio, cinematográfico. Não é currículo genérico nem landing de startup.
+
+- **Fonte de verdade de escopo:** `specs/README.md` (ler a spec relevante antes de implementar uma feature).
+- **Doc consolidado:** `docs/portfolio-lucas-braz-dutra.md` (referência; preferir specs para implementação).
+
+## Princípios (resumo)
+
+1. Personalidade > efeitos. 2. Conteúdo técnico > buzzwords. 3. Atmosfera > decoração.
+4. Three.js com propósito. 5. Site forte mesmo com WebGL/efeitos desligados ou falhando.
+6. Mobile desde o início. 7. Terror sutil (psicológico), não Halloween.
+8. Cada animação justificada. 9. Projetos = decisões, não só stack. 10. O repo demonstra engenharia.
+
+## Fases
+
+Seguir `specs/17-release-phases.md`: V1 identidade/HTML antes de narrativa 3D (V4 opcional).
+
+## Decisões abertas
+
+Não inventar paleta/tipografia/nome do Lab sem checar `specs/18-open-decisions.md`. Usar placeholders coerentes com `specs/08-visual-identity.md`.

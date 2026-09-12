@@ -1,0 +1,31 @@
+---
+description: Conteúdo em content/ e template de case studies
+globs: content/**/*
+alwaysApply: false
+---
+
+# Conteúdo
+
+Arquivos em `content/` são a fonte editorial. Código só renderiza; não duplicar copy longa em TSX.
+
+## Projetos (`content/projects/`)
+
+Frontmatter sugerido: `title`, `summary`, `stack` (array ou string), `order`, `featured` (boolean).
+
+Corpo do case study — seções **nesta ordem** (`specs/06-projects-case-studies.md`):
+
+1. Problema 2. Contexto 3. Decisões 4. Arquitetura (diagrama) 5. Resultado 6. O que eu faria diferente
+
+Não publicar case só com lista de tecnologias.
+
+## Experience (`content/experience/`)
+
+Bloco Currently + lista Learning (`specs/05-section-currently.md`); itens numerados, sem parágrafo obrigatório por item.
+
+## Lab (`content/experiments/`)
+
+Experimentos informais (`specs/07-lab-oficina.md`); não exigir template completo de case study.
+
+## Idioma
+
+UI PT/EN ainda em aberto (`specs/18-open-decisions.md`); manter consistência dentro de cada arquivo.

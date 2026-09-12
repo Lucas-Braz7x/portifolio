@@ -1,0 +1,29 @@
+---
+description: Estilização editorial, tokens e motion
+globs: "{src/**/*.{tsx,css},**/*.css}"
+alwaysApply: false
+---
+
+# Estilização (decisão fechada)
+
+**Stack de estilo:** **Tailwind CSS v4** + plugin Vite (`@tailwindcss/vite`).
+
+Tokens e tema em `src/styles/` ( `@theme` / variáveis alinhadas a `specs/08-visual-identity.md`).
+
+Complementos permitidos:
+
+- **CSS Modules** ou `.css` por componente para grain/vignette (`specs/09`) quando utilities poluírem o JSX.
+- **Motion:** preferir CSS + `prefers-reduced-motion`; **Motion** (ex-Framer) só para transições pontuais justificadas.
+
+Não introduzir outro sistema de estilo (MUI, Chakra, Bootstrap) sem atualizar specs e esta rule.
+
+## Regras visuais
+
+- Muito espaço vazio; tipografia forte; alto contraste.
+- Cor de destaque única e rara; **não** vermelho dominante por “terror”.
+- Dados técnicos (stack, logs): fonte monoespaçada.
+- Animações sutis; respeitar `prefers-reduced-motion` (desligar flicker, grain animado, parallax).
+
+## Tokens
+
+Centralizar cores/fontes/spacing (Tailwind theme ou `:root` em `tokens.css`). Não espalhar hex arbitrário em componentes.

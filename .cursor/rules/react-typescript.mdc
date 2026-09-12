@@ -1,0 +1,35 @@
+---
+description: Padrões React/TS para componentes e páginas
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# React e TypeScript
+
+- Componentes funcionais; sem classes.
+- Colocar lógica reutilizável em hooks em `src/hooks/` (ex.: `useReducedMotion`, `useMediaQuery`).
+- Props tipadas; evitar `any`. Preferir tipos de domínio em `src/types/`.
+- Páginas em `src/pages/` finas; composição em `src/components/`.
+
+## Acessibilidade
+
+- Um `h1` por página; hierarquia de headings coerente.
+- Links e botões com texto ou `aria-label` claro.
+- Estados de foco visíveis (não remover outline sem substituto).
+
+## Performance
+
+- Imagens: dimensões explícitas, formatos modernos (webp/avif), lazy below the fold.
+- Listas de projetos: dados estáticos no build; sem fetch em runtime para conteúdo editorial.
+
+## Exemplo
+
+```tsx
+// ✅ página fina
+export function ProjectsPage() {
+  const projects = useProjects(); // lê content/ no build
+  return <ProjectList items={projects} />;
+}
+```
+
+Não usar kits de UI genéricos que empurrem visual de startup (evitar “template dev portfolio”).

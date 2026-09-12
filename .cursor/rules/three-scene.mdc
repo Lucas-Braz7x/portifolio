@@ -1,0 +1,35 @@
+---
+description: Three.js / R3F — atmosfera, camadas e fallback
+globs: src/components/three/**/*
+alwaysApply: false
+---
+
+# Cena 3D
+
+Three.js é **atmosfera**, não demo de tecnologia (`specs/10-threejs-guidelines.md`).
+
+Antes de cada mesh/efeito WebGL:
+
+> Isso precisa ser 3D para a experiência desejada? Se não, use imagem, CSS ou 2D.
+
+## Camadas (`specs/12-scene-3d-layers.md`)
+
+1. HTML/React — texto, nav, a11y, links (sempre por cima para interação).
+2. Imagem / 2.5D — background e parallax (`specs/14`).
+3. R3F — porta, piano, luz, sombra (fases V2–V3).
+
+## Implementação
+
+- Canvas: `pointer-events: none` no overlay; exceções explícitas só onde houver interação (ex.: tecla do piano).
+- Lazy load do bundle `three`; fallback se WebGL indisponível (só background 2D).
+- Não bloquear scroll nem capturar foco do teclado.
+- Áudio: nunca autoplay (`specs/09`).
+
+## Anti-padrão
+
+```tsx
+// ❌ WebGL cobrindo a página sem propósito narrativo
+<Canvas className="fixed inset-0 z-50" />
+```
+
+Sucesso do visitante: “site estranho e bonito” — não “colocou Three.js no portfólio”.
