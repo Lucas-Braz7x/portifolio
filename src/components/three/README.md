@@ -37,3 +37,5 @@ Estilos: [`src/styles/scene-layers.css`](../../styles/scene-layers.css), tokens 
 | `SceneBackground.tsx` | Camada 2.5D (spec 14) |
 | `DepthParallaxBackground.tsx` | Shader WebGL2 + fallback estático (plano B, spec 13) |
 | `SceneCanvas.tsx` | Boundary WebGL + flag `VITE_SCENE_3D` |
+| `DoorObject.tsx` / `PianoObject.tsx` | Meshes procedurais por rota (spec 15) |
+| `SceneCameraRig.tsx` | Câmera por pathname + scroll Home (spec 16) |

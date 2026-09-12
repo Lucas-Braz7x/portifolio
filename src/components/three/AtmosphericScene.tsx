@@ -2,26 +2,17 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useRef } from 'react'
 import type { PointLight, Points } from 'three'
 
+import { DoorObject } from '@/components/three/DoorObject'
+import { PianoObject } from '@/components/three/PianoObject'
+import { SceneCameraRig } from '@/components/three/SceneCameraRig'
 import type { NarrativeIntensity } from '@/types/narrative'
+import type { SceneRoutePose } from '@/types/scene-routes'
 
 type AtmosphericSceneProps = {
   animate: boolean
   narrativeIntensity: NarrativeIntensity
+  routePose: SceneRoutePose
 }
-
-/** Silhueta distante — placeholder até spec 15 (porta 3D). */
-const DoorSilhouette = () => (
-  <group position={[2.1, -0.55, -4.2]} rotation={[0, -0.4, 0]}>
-    <mesh position={[0, 0, 0]}>
-      <boxGeometry args={[0.06, 1.75, 0.85]} />
-      <meshStandardMaterial color="#121214" metalness={0.25} roughness={0.92} />
-    </mesh>
-    <mesh position={[0.38, 0, 0]}>
-      <boxGeometry args={[0.04, 1.75, 0.04]} />
-      <meshStandardMaterial color="#0e0e10" metalness={0.2} roughness={0.95} />
-    </mesh>
-  </group>
-)
 
 const pseudoRandom = (seed: number): number => {
   const x = Math.sin(seed * 12.9898) * 43758.5453
@@ -69,6 +60,7 @@ const DustMotes = ({ animate }: { animate: boolean }) => {
 export const AtmosphericScene = ({
   animate,
   narrativeIntensity,
+  routePose,
 }: AtmosphericSceneProps) => {
   const keyLightRef = useRef<PointLight>(null)
   const { pointer } = useThree()
@@ -92,8 +84,22 @@ export const AtmosphericScene = ({
 
   return (
     <>
+      <SceneCameraRig pose={routePose} />
       <fog attach="fog" args={['#0a0a0b', 5, 13]} />
       <ambientLight intensity={0.06} />
+      <directionalLight
+        position={[3.5, 5, 2]}
+        intensity={0.28}
+        color="#c4b5a0"
+        castShadow
+        shadow-mapSize-width={512}
+        shadow-mapSize-height={512}
+        shadow-camera-far={16}
+        shadow-camera-left={-6}
+        shadow-camera-right={6}
+        shadow-camera-top={6}
+        shadow-camera-bottom={-6}
+      />
       <pointLight
         ref={keyLightRef}
         position={[1.4, 1, 2.2]}
@@ -102,7 +108,16 @@ export const AtmosphericScene = ({
         distance={12}
         decay={2}
       />
-      <DoorSilhouette />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.15, -2.5]} receiveShadow>
+        <planeGeometry args={[18, 18]} />
+        <shadowMaterial transparent opacity={0.22} />
+      </mesh>
+      <DoorObject
+        pose={routePose.door}
+        narrativeIntensity={narrativeIntensity}
+        animate={animate}
+      />
+      <PianoObject pose={routePose.piano} animate={animate} />
       <DustMotes animate={animate} />
     </>
   )
