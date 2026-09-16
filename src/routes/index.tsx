@@ -24,6 +24,9 @@ const ContactPage = lazy(() =>
 const LabPage = lazy(() =>
   import('@/pages/LabPage').then((m) => ({ default: m.LabPage })),
 )
+const NotesPage = lazy(() =>
+  import('@/pages/NotesPage').then((m) => ({ default: m.NotesPage })),
+)
 
 const withSuspense = (element: ReactNode) => (
   <Suspense fallback={<PageFallback />}>{element}</Suspense>
@@ -39,6 +42,7 @@ export const router = createBrowserRouter([
       { path: 'projects/:slug', element: withSuspense(<ProjectDetailPage />) },
       { path: 'about', element: withSuspense(<AboutPage />) },
       { path: 'contact', element: withSuspense(<ContactPage />) },
+      { path: 'notes', element: withSuspense(<NotesPage />) },
       { path: 'lab', element: withSuspense(<LabPage />) },
     ],
   },
