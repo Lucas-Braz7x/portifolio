@@ -8,6 +8,7 @@ stack:
   - Node
 order: 1
 featured: true
+thumbnail: /scene/room-background.webp
 ---
 
 ## Problema

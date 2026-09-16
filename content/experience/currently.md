@@ -1,9 +1,9 @@
 ---
 role: Software Engineer @ Certta
 focus:
-  - AWS / Backend / Fullstack
-  - AI Engineering
-  - Spec-Driven Development
+  - Software Engineer na Certta
+  - Fullstack · AWS · APIs
+  - Tocando piano, fazendo cerâmica, lendo
 learning:
   - Distributed Systems
   - AI Engineering

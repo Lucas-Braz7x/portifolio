@@ -4,6 +4,8 @@ export type ProjectFrontmatter = {
   stack?: string[] | string
   order?: number
   featured?: boolean
+  /** Path em `public/` — obrigatório para featured na Home quando publicado (spec 21). */
+  thumbnail?: string
 }
 
 export type CaseStudySectionKey =
@@ -27,6 +29,7 @@ export type Project = {
   stack: string[]
   order?: number
   featured?: boolean
+  thumbnail?: string
   sections: CaseStudySection[]
 }
 

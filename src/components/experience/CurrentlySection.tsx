@@ -4,11 +4,14 @@ type CurrentlySectionProps = {
   currently: Currently
   /** Exibir prefixo `/` nas linhas de foco (referência visual home). */
   showFocusSlash?: boolean
+  /** Faixa editorial Home: só role + foco, sem learning. */
+  compact?: boolean
 }
 
 export const CurrentlySection = ({
   currently,
   showFocusSlash = true,
+  compact = false,
 }: CurrentlySectionProps) => (
   <div className="space-y-4">
     <p className="type-body-sm text-[var(--color-fg)]">{currently.role}</p>
@@ -28,7 +31,7 @@ export const CurrentlySection = ({
       </ul>
     ) : null}
 
-    {currently.learning.length > 0 ? (
+    {!compact && currently.learning.length > 0 ? (
       <div>
         <p
           id="currently-learning-label"

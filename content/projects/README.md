@@ -9,6 +9,7 @@ Cada arquivo `.md` ou `.mdx` em esta pasta é um projeto. Frontmatter obrigatór
 | `stack` | não | Lista ou string; exibida como `AWS · Lambda` |
 | `order` | não | Ordenação na lista |
 | `featured` | não | `true` para aparecer na Home (até 5) |
+| `thumbnail` | não | Path em `public/` — card na Home (spec 21) |
 
 ## Corpo — seções obrigatórias (spec 06)
 

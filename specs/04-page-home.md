@@ -1,5 +1,7 @@
 # Spec 04 — Página Home
 
+> **Nota:** entregáveis V1 abaixo permanecem válidos. O layout alvo pós-paridade visual está em [`19-home-visual-parity.md`](./19-home-visual-parity.md) e specs **20–25** (referência [`docs/images/home.png`](../docs/images/home.png)).
+
 ## Escopo
 
 Estrutura, blocos e navegação primária da landing.

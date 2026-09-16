@@ -24,7 +24,7 @@ const normalizeStack = (stack: ProjectFrontmatter['stack']): string[] => {
 const toProject = (path: string, raw: string): Project => {
   const slug = slugFromPath(path)
   const doc = parseMarkdownDocument<ProjectFrontmatter>(raw, slug)
-  const { title, summary, order, featured, stack } = doc.frontmatter
+  const { title, summary, order, featured, stack, thumbnail } = doc.frontmatter
 
   if (!title || !summary) {
     throw new Error(
@@ -41,6 +41,7 @@ const toProject = (path: string, raw: string): Project => {
     summary,
     order,
     featured,
+    thumbnail,
     stack: normalizeStack(stack),
     sections,
   }
