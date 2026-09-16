@@ -26,7 +26,7 @@ Regiões deslocam em velocidades diferentes com movimento de câmera → sensaç
 
 ## Entregáveis
 
-- [x] Shader ou técnica escolhida (R3F custom, displacement simples, etc.) → WebGL2 fullscreen quad em [`src/lib/scene/depth-parallax-gl.ts`](../src/lib/scene/depth-parallax-gl.ts)
+- [x] Shader depth (legado) em [`depth-parallax-gl.ts`](../src/lib/scene/depth-parallax-gl.ts); **produção** usa pan/zoom CSS em [`RouteSceneBackground.tsx`](../src/components/three/RouteSceneBackground.tsx) sem depth map por cena
 - [x] Asset `depth.png` alinhado ao background → placeholders alinhados [`public/scene/room-depth.svg`](../public/scene/room-depth.svg) + [`room-background.svg`](../public/scene/room-background.svg) (substituir por PNG conforme guia spec 13)
 
 ## Critérios de aceite

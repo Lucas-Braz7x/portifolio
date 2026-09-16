@@ -1,8 +1,8 @@
-import { DepthParallaxBackground } from '@/components/three/DepthParallaxBackground'
+import { RouteSceneBackground } from '@/components/three/RouteSceneBackground'
 
-/** Layer 2 — imagem + depth parallax 2.5D (specs 13–14). */
+/** Layer 2 — cenas 2.5D por rota (specs 13–14, 16). */
 export const SceneBackground = () => (
   <div className="scene-layer scene-layer--background">
-    <DepthParallaxBackground />
+    <RouteSceneBackground />
   </div>
 )

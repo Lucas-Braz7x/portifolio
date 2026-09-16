@@ -22,6 +22,118 @@
     z-index: var(--z-scene-bg);
   }
 
+  .scene-route-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background-color: var(--color-bg);
+  }
+
+  .scene-route-bg__plate {
+    position: absolute;
+    inset: -4%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: opacity, transform, filter;
+  }
+
+  /** Corredor / piano — alinhar contraste ao hero `home` */
+  .scene-route-bg__plate--dimmed::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(10 10 11 / 0.35) 0%,
+      rgb(10 10 11 / 0.5) 55%,
+      rgb(10 10 11 / 0.62) 100%
+    );
+    pointer-events: none;
+  }
+
+  .scene-route-bg__plate--dimmed {
+    filter: brightness(0.78) contrast(1.06) saturate(0.88);
+  }
+
+  .scene-route-bg__plate--motion {
+    transform: translate(var(--scene-pan-x, 0%), var(--scene-pan-y, 0%))
+      scale(var(--scene-scale, 1));
+    transition: transform 120ms ease-out;
+  }
+
+  .scene-route-bg__plate--in {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .scene-route-bg__plate--in.is-entering {
+    animation: scene-route-fade-in 850ms ease-out forwards;
+  }
+
+  .scene-route-bg__plate--out {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .scene-route-bg__plate--out.is-leaving {
+    animation: scene-route-fade-out 850ms ease-out forwards;
+  }
+
+  .scene-route-bg__plate--breathe {
+    animation: scene-route-breathe 14s ease-in-out infinite;
+  }
+
+  .scene-route-bg__plate--breathe.is-entering {
+    animation:
+      scene-route-fade-in 850ms ease-out forwards,
+      scene-route-breathe 14s ease-in-out 850ms infinite;
+  }
+
+  @keyframes scene-route-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scene-route-fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes scene-route-breathe {
+    0%,
+    100% {
+      filter: brightness(0.94) contrast(1.02);
+    }
+    50% {
+      filter: brightness(1.04) contrast(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scene-route-bg__plate--motion {
+      transition: none;
+    }
+
+    .scene-route-bg__plate--breathe,
+    .scene-route-bg__plate--breathe.is-entering {
+      animation: none;
+    }
+
+    .scene-route-bg__plate--in.is-entering,
+    .scene-route-bg__plate--out.is-leaving {
+      animation: none;
+    }
+  }
+
   .scene-parallax,
   .scene-parallax__canvas {
     position: absolute;

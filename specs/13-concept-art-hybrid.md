@@ -36,4 +36,4 @@ Transição foto ↔ 3D deve ser **imperceptível** na melhor versão.
 ## Critérios de aceite
 
 - [x] Cada elemento 3D justificado pela regra em `10-threejs-guidelines.md` — campo `justification` em cada mesh no manifest
-- [x] Plano B documentado: apenas imagem full-bleed sem meshes — `planB` no manifest + fallback em [`DepthParallaxBackground.tsx`](../src/components/three/DepthParallaxBackground.tsx)
+- [x] Plano B documentado: imagem full-bleed por rota sem meshes — [`route-backgrounds.json`](../content/scene/route-backgrounds.json), [`RouteSceneBackground.tsx`](../src/components/three/RouteSceneBackground.tsx)

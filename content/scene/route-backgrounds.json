@@ -1,0 +1,29 @@
+{
+  "defaultSceneId": "home",
+  "scenes": [
+    {
+      "id": "home",
+      "path": "/scene/room-background.webp",
+      "label": "Hero cinematográfico"
+    },
+    {
+      "id": "corredor",
+      "path": "/scene/corredor.webp",
+      "label": "Corredor"
+    },
+    {
+      "id": "piano",
+      "path": "/scene/piano.webp",
+      "label": "Piano"
+    }
+  ],
+  "routes": [
+    { "path": "/", "sceneId": "home" },
+    { "path": "/contact", "sceneId": "home" },
+    { "path": "/projects", "sceneId": "corredor" },
+    { "path": "/projects/*", "sceneId": "corredor" },
+    { "path": "/notes", "sceneId": "corredor" },
+    { "path": "/about", "sceneId": "piano" },
+    { "path": "/lab", "sceneId": "piano" }
+  ]
+}

@@ -23,7 +23,7 @@ HTML permanece o site; Three.js é cenário cinematográfico.
 
 ## Entregáveis
 
-- [x] Estratégia: scroll na Home única vs. câmera por `pathname` em SPA → [`docs/scene/camera-scroll-strategy.md`](../docs/scene/camera-scroll-strategy.md)
+- [x] Estratégia: scroll na Home + cena por `pathname` (2.5D) → [`docs/scene/route-backgrounds.md`](../docs/scene/route-backgrounds.md), [`docs/scene/camera-scroll-strategy.md`](../docs/scene/camera-scroll-strategy.md)
 - [x] Integração com `11-narrative-horror-layer.md` (intensidade por parada) → `openRad` da porta em [`DoorObject.tsx`](../src/components/three/DoorObject.tsx); luz em [`AtmosphericScene.tsx`](../src/components/three/AtmosphericScene.tsx)
 
 ## Critérios de aceite

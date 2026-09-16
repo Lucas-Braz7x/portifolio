@@ -4,9 +4,10 @@
 
 | Modo | Quando | Comportamento |
 |------|--------|----------------|
-| **Primário — `pathname`** | Toda navegação SPA | Pose de câmera, porta e piano vêm de [`content/scene/scene-routes.json`](../../content/scene/scene-routes.json). |
-| **Secundário — scroll na Home** | Apenas rota `/` | Progresso do scroll do **documento** (`window.scrollY`) adiciona offset suave à pose `camera` + `scroll` da Home. |
-| **Narrativa (spec 11)** | Todas as rotas | `openRad` da porta escala com `narrativeIntensity`; luz já reage em `AtmosphericScene`. |
+| **Primário — `pathname`** | Toda navegação SPA | Textura de fundo (room / corredor / piano) em [`content/scene/route-backgrounds.json`](../../content/scene/route-backgrounds.json) com crossfade. |
+| **Secundário — scroll na Home** | Apenas rota `/` | Scroll do documento modula pan vertical da cena 2.5D (`useSceneRouteBackground`). |
+| **Opcional — R3F** | `VITE_SCENE_3D=true` | Poses em [`scene-routes.json`](../../content/scene/scene-routes.json) (legado; meshes desligados por padrão). |
+| **Narrativa (spec 11)** | Todas as rotas | Intensidade por rota → atributos `data-narrative-*` no HTML. |
 
 Não usamos scroll hijacking, `position: fixed` no body, nem bloqueio de wheel/touch. O HTML continua scrollável e independente da câmera WebGL.
 
