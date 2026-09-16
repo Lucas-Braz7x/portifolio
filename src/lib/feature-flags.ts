@@ -7,9 +7,9 @@ const envFlag = (value: string | undefined, defaultWhenUnset: boolean): boolean 
 export const isNarrativeLayerEnabled = (): boolean =>
   envFlag(import.meta.env.VITE_NARRATIVE_LAYER, true)
 
-/** WebGL scene (spec 12). `VITE_SCENE_3D=false` desliga o canvas. */
+/** WebGL scene (spec 12). Desligado por padrão — porta/piano ficam na textura do hero. */
 export const isScene3dEnabled = (): boolean =>
-  envFlag(import.meta.env.VITE_SCENE_3D, true)
+  envFlag(import.meta.env.VITE_SCENE_3D, false)
 
 /** Depth parallax 2.5D (spec 14). `VITE_SCENE_PARALLAX=false` força imagem estática. */
 export const isSceneParallaxEnabled = (): boolean =>
