@@ -1,17 +1,22 @@
 import { Link } from 'react-router-dom'
 
+import { RecIndicator } from '@/components/atmosphere/RecIndicator'
 import { PrimaryNav } from '@/components/layout/PrimaryNav'
 
+/** Header único em todas as rotas — paridade com referência da Home (spec 19/24). */
 export const SiteHeader = () => (
-  <header className="relative z-[var(--z-content)] layout-header border-b border-[var(--color-border)]">
-    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+  <header className="layout-header layout-header--site">
+    <div className="layout-header__grid">
       <Link
         to="/"
-        className="font-display text-lg tracking-[0.2em] text-[var(--color-fg)] uppercase"
+        className="layout-header__logo font-mono text-sm tracking-[0.28em] text-[var(--color-fg)] uppercase"
       >
         LBD
       </Link>
-      <PrimaryNav />
+      <PrimaryNav className="layout-header__nav" />
+      <div className="layout-header__rec">
+        <RecIndicator />
+      </div>
     </div>
   </header>
 )

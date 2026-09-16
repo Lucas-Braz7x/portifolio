@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 
+import { SitePageLayout } from '@/components/layout/SitePageLayout'
 import { CaseStudyLayout } from '@/components/projects/CaseStudyLayout'
 import { useProject } from '@/hooks/useProjects'
 
@@ -9,21 +10,28 @@ export const ProjectDetailPage = () => {
 
   if (!project) {
     return (
-      <div>
-        <h1 className="type-page-title">Projeto não encontrado</h1>
-        <p className="type-body-sm mt-4 text-[var(--color-muted)]">
-          Slug <code className="text-[var(--color-fg)]">{slug}</code> não existe em{' '}
-          <code className="text-[var(--color-fg)]">content/projects/</code>.
-        </p>
+      <SitePageLayout
+        title="Projeto não encontrado"
+        intro={
+          <>
+            Slug <code className="text-[var(--color-fg)]">{slug}</code> não existe em{' '}
+            <code className="text-[var(--color-fg)]">content/projects/</code>.
+          </>
+        }
+      >
         <Link
           to="/projects"
-          className="type-body-sm mt-6 inline-block text-[var(--color-fg)] underline-offset-4 hover:underline"
+          className="type-body-sm inline-block text-[var(--color-fg)] underline-offset-4 hover:underline"
         >
           ← voltar aos projetos
         </Link>
-      </div>
+      </SitePageLayout>
     )
   }
 
-  return <CaseStudyLayout project={project} />
+  return (
+    <SitePageLayout>
+      <CaseStudyLayout project={project} />
+    </SitePageLayout>
+  )
 }

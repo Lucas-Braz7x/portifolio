@@ -4,6 +4,7 @@
 @import './atmosphere.css';
 @import './scene-layers.css';
 @import './narrative.css';
+@import './home.css';
 
 /* Paleta e fontes — specs/08-visual-identity.md */
 @theme {
@@ -12,6 +13,7 @@
   --color-muted: #8a8680;
   --color-border: #2a2926;
   --color-accent: #c4b5a0;
+  --color-rec: #d94a3a;
 
   --font-display: 'Cormorant Garamond', ui-serif, Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
