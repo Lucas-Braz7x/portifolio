@@ -8,6 +8,7 @@ Camada visual CSS/canvas leve: grain, vignette, flicker, scan, cursor, blocos de
 
 - WebGL / Three.js → `10-threejs-guidelines.md` em diante
 - Narrativa por seção → `11-narrative-horror-layer.md`
+- REC, timestamp e citação do hero → `24-found-footage-chrome.md`
 
 ## Referência conceitual
 

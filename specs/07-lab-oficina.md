@@ -23,7 +23,9 @@
 
 Opções documentadas: `Lab`, `Experiments`, `Workshop`, **`Oficina`** (favorece ligação manual/criativo).
 
-**Decisão pendente** em `18-open-decisions.md`.
+**Decisão:** rota `/lab` mantida; **nav primária** usa NOTAS em `[ 04 ]` — ver [`23-notes.md`](./23-notes.md) e [`19-home-visual-parity.md`](./19-home-visual-parity.md). Nome exibido na UI secundária ainda pendente abaixo.
+
+**Decisão pendente (rótulo secundário)** em `18-open-decisions.md`.
 
 ## UX mínima
 

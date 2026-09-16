@@ -24,6 +24,27 @@ Especificações derivadas de [`docs/portfolio-lucas-braz-dutra.md`](../docs/por
 | 16 | [camera-scroll](./16-camera-scroll.md) | Câmera ligada à navegação/scroll |
 | 17 | [release-phases](./17-release-phases.md) | V1–V4 e o que entra em cada fase |
 | 18 | [open-decisions](./18-open-decisions.md) | Checklist de decisões pendentes |
+| 19 | [home-visual-parity](./19-home-visual-parity.md) | Contrato de paridade com `docs/images/home.png` |
+| 20 | [home-cinematic-hero](./20-home-cinematic-hero.md) | Hero full-viewport + máscara de cena |
+| 21 | [home-project-showcase](./21-home-project-showcase.md) | Grade de 3 projetos na Home |
+| 22 | [home-editorial-footer](./22-home-editorial-footer.md) | Faixa 3 colunas + barra final |
+| 23 | [notes](./23-notes.md) | Rota `/notes` e nav `[ 04 ]` |
+| 24 | [found-footage-chrome](./24-found-footage-chrome.md) | REC, timestamp, citação hero |
+| 25 | [responsive-visual-qa](./25-responsive-visual-qa.md) | Breakpoints e regressão visual |
+
+## Paridade visual da Home (19–25)
+
+Implementar **depois** do V1 funcional (specs 04–09 entregues). Ordem sugerida:
+
+```text
+19 (contrato) ──► 20 ──┬──► 21
+                       ├──► 22 ──► 23
+                       └──► 24
+                              │
+                              └──► 25 (QA + baselines)
+```
+
+Referência única: [`docs/images/home.png`](../docs/images/home.png).
 
 ## Dependências (alto nível)
 
@@ -40,6 +61,7 @@ Especificações derivadas de [`docs/portfolio-lucas-braz-dutra.md`](../docs/por
 
 17 release-phases ordena o que implementar primeiro — DoD: [`docs/release-phases.md`](../docs/release-phases.md).
 18 open-decisions não bloqueia V1, mas bloqueia polish final.
+19–25 home visual parity — milestone pós-V1; ver seção acima.
 ```
 
 ## Convenções das specs

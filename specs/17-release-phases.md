@@ -45,6 +45,22 @@ Ordem incremental de entrega; **não é obrigatório** chegar à V4.
 
 **Specs:** 11, 16.
 
+## Home visual parity (pós-V1)
+
+Milestone **independente** das fases V2–V4: alinhar `/` a [`docs/images/home.png`](../docs/images/home.png) sem invalidar deploy com cena desligada.
+
+| Ordem | Spec | Notas |
+|-------|------|--------|
+| 1 | `19-home-visual-parity.md` | Contrato e checklist |
+| 2 | `20-home-cinematic-hero.md` | Funciona com flags V1 off; ganha profundidade com V2–V4 |
+| 2 | `21-home-project-showcase.md` | HTML + mídia; não exige WebGL |
+| 2 | `22-home-editorial-footer.md` | Footer editorial |
+| 3 | `23-notes.md` | Rota + nav |
+| 3 | `24-found-footage-chrome.md` | REC / timestamp (sobre 09) |
+| 4 | `25-responsive-visual-qa.md` | Baselines screenshot |
+
+DoD copiável: [`docs/release-phases.md`](../docs/release-phases.md#home-visual-parity).
+
 ## Entregáveis
 
 - [x] Milestones ou labels no issue tracker alinhados a V1–V4 → [`.github/release-phase-labels.md`](../.github/release-phase-labels.md), [`scripts/github-phase-labels.sh`](../scripts/github-phase-labels.sh)

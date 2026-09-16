@@ -12,6 +12,34 @@ Cada fase **adiciona** valor; fases anteriores continuam utilizáveis via flags 
 | **V2** | 2.5D + camada WebGL básica | 10, 12, 14 | **Entregue** — parallax + cena atmosférica |
 | **V3** | Híbrido foto + meshes | 13, 15 | **Entregue (mínimo)** — procedural; GLB/arte pendente |
 | **V4** | Narrativa + câmera | 11, 16 | **Entregue (mínimo)** — polish narrativo opcional |
+| **Parity** | Home vs `home.png` | 19–25 | **Em progresso** — nav + `/notes`; layout mock pendente 20–22 |
+
+---
+
+## Home visual parity
+
+**Objetivo:** composição e chrome da referência [`docs/images/home.png`](../docs/images/home.png) na rota `/`, com fallback forte quando WebGL/parallax/narrativa estão off.
+
+**Specs:** [`19-home-visual-parity.md`](../specs/19-home-visual-parity.md) (contrato) → 20 / 21 / 22 → 23 / 24 → 25.
+
+Checklist manual: [`home-visual-parity-checklist.md`](./home-visual-parity-checklist.md).
+
+### Definition of Done (copiar para issue/milestone)
+
+```markdown
+- [ ] Home: ordem hero → projetos → faixa 03–05 → barra final (spec 19 — adiar até 20–22)
+- [ ] Hero ~100dvh + máscara cena (spec 20)
+- [x] Nav primária PT: INÍCIO, PROJETOS, SOBRE, NOTAS, CONTATO; `/lab` fora da nav
+- [ ] REC + timestamp + citação hero (spec 24)
+- [x] `/notes` com conteúdo mínimo em `content/notes/`
+- [ ] Thumbnails featured + placeholders documentados (spec 21)
+- [ ] Regressão visual static em 1440, 768, 390 (spec 25)
+- [x] `yarn build` + flags V1 off: site legível (fundo opaco abaixo do hero)
+```
+
+**Ordem de implementação:** 19 → (20 ∥ 21 ∥ 22) → 23 → 24 → 25.
+
+**Relação com V2–V4:** spec 20 integra cena existente; paridade HTML (21–22) não depende de 3D.
 
 ---
 

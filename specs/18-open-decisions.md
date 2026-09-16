@@ -21,11 +21,11 @@ Quando um item fechar: marcar `[x]` aqui com link para spec/ADR/código e remove
 - [ ] Tipografia final (provisória: Cormorant + IBM Plex Mono — spec 08)
 - [ ] Referências concretas de filmes/terror (para alinhar equipe/IA de arte)
 - [ ] Frase de posicionamento final na Home (placeholder em [`content/site/vision.json`](../content/site/vision.json))
-- [ ] PT vs EN na UI
+- [ ] Tagline alternativa à barra final (provisória fechada: “ENTRE SISTEMAS E SILÊNCIOS.” — [`22-home-editorial-footer.md`](./22-home-editorial-footer.md))
 
 ### Estrutura
 
-- [ ] Nome da área Lab: Lab / Experiments / Workshop / **Oficina** (UI usa “Lab” em [`PrimaryNav`](../src/components/layout/PrimaryNav.tsx) até decidir)
+- [ ] Nome da área Lab na UI secundária: Lab / Experiments / Workshop / **Oficina** (rota `/lab` mantida; fora da nav primária — [`23-notes.md`](./23-notes.md))
 
 ### Projetos
 
@@ -57,6 +57,9 @@ Quando um item fechar: marcar `[x]` aqui com link para spec/ADR/código e remove
 ### Estrutura
 
 - [x] Rota do Lab → `/lab` — [`07-lab-oficina.md`](./07-lab-oficina.md), [`src/routes/index.tsx`](../src/routes/index.tsx)
+- [x] UI da nav primária em **PT-BR** (labels INÍCIO, PROJETOS, …) — contrato [`19-home-visual-parity.md`](./19-home-visual-parity.md)
+- [x] Slot `[ 04 ]` da nav primária = **NOTAS** → `/notes`; Lab fora da nav primária — [`23-notes.md`](./23-notes.md), [`19-home-visual-parity.md`](./19-home-visual-parity.md)
+- [x] Layout alvo da Home vs wire spec 04 — paridade [`docs/images/home.png`](../docs/images/home.png) via trilha **19–25** (spec 04 permanece registro V1)
 
 ### 3D e narrativa
 
